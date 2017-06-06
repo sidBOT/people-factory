@@ -4,7 +4,9 @@ function handleSubmit(ev) {
     const f = ev.target
     const name = f.personName.value
     const pass = f.password.value
+    const details = document.querySelector('#details')
     var string = "name: " + name + " pass: " + pass;
     document.querySelector('h1').textContent = string;
+    details.innerHTML = '<em>' + name + '</em>'
 }
 personForm.addEventListener('submit', handleSubmit)
