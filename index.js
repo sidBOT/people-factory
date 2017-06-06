@@ -8,6 +8,9 @@ function handleSubmit(ev) {
     var string = "name: " + name + " pass: " + pass;
     document.querySelector('h1').textContent = string;
     //details.innerHTML = '<em>' + name + '</em>'
-    details.innerHTML =`<em>${name}</em>`;
+    //details.innerHTML =`<em>${name}</em>`;
+    const em = document.createElement('em');
+    em.textContent = name;
+    details.appendChild(em);
 }
 personForm.addEventListener('submit', handleSubmit)
